@@ -314,7 +314,7 @@ st.write('')
 st.write('')
 
 
-st.write('問７　以下の図で示したノギスの各部の名称を答えよ')
+st.markdown('問７　以下の図で示したノギスの各部の名称を答えよ')
 image = Image.open('nogisu_name.jpg')
 st.image(image,use_column_width=True)
 
@@ -373,7 +373,7 @@ st.write('')
 st.write('')
 
 st.markdown('##### 適する数値を入力してください。')
-st.write('問８　以下の図で示したノギスの測定値を答えよ')
+st.markdown('問８　以下の図で示したノギスの測定値を答えよ')
 image = Image.open('nogisu_ex.jpg')
 st.image(image,use_column_width=True)
 
