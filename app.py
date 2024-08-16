@@ -65,7 +65,7 @@ input_data = '　　本アプリは、2学期中間考査対策用です。\
 ちなみに、考査で出題される基本統計量は、平均値、偏差、不偏分散、標準偏差、変動係数です。\
 では、最後まで頑張って取り組んでください'
 st.write('はじめに')
-St.write('')
+st.write('')
 st.write(input_data)
 # テキスト入力
 text_input = st.text_area(input_data)
