@@ -67,9 +67,9 @@ input_data = '　本アプリは、2学期中間考査対策用です。\
 
 st.write('はじめに')
 st.write('')
-#st.write(input_data)
+st.write(input_data)
 # テキスト入力
-text_input = st.text_area(input_data)
+#text_input = st.text_area(input_data)
 
 # 言語設定（デフォルトは日本語）
 language = 'ja'
