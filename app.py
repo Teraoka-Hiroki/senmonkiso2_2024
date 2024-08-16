@@ -1,7 +1,6 @@
 # Hiroki Teraoka 2024.08.16 Ver1
 
 import os
-from google.cloud import texttospeech
 import requests
 import io
 import streamlit as st
