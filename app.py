@@ -55,15 +55,16 @@ st.title('専門基礎２学期パーフェクトアプリ 2024年版')
 st.write('')
 st.write('')
 
-input_data = '　　本アプリは、2学期中間考査対策用です。\
-問い１から問い６までは、表計算アプリ、エクセルの問題です。\
+preset_text = '　本アプリは、2学期中間考査対策用です。\
+問１から問６までは、表計算アプリ、エクセルの問題です。\
 各問い、動画を視聴してから後の問題にトライしてください。\
-問い７からは、ノギスの問題です。\
+問７からは、ノギスの問題です。\
 ノギスの名称と測定値の求め方の問題にトライしてください。\
 なお、考査では、基本統計量の計算問題もでますが、このアプリでは割愛しています。\
 各自で確認しておいてください。\
 ちなみに、考査で出題される基本統計量は、平均値、偏差、不偏分散、標準偏差、変動係数です。\
 では、最後まで頑張って取り組んでください'
+
 st.write('はじめに')
 st.write('')
 #st.write(input_data)
@@ -73,27 +74,23 @@ text_input = st.text_area(input_data)
 # 言語設定（デフォルトは日本語）
 language = 'ja'
 
-# ボタンをクリックしたときの処理
-if st.button("音声で確認"):
-#    if text_input:
-    tts = gTTS(text=text_input, lang=language)
-    tts.save("output.mp3")
+# 再生ボタンをクリックしたときの処理
+if st.button("音声を再生"):
+    # gTTSを使ってテキストを音声に変換
+    tts = gTTS(text=preset_text, lang='ja')
+    tts.save("preset_output.mp3")
     
     # 音声ファイルの再生
-    audio_file = open("output.mp3", "rb")
+    audio_file = open("preset_output.mp3", "rb")
     audio_bytes = audio_file.read()
     st.audio(audio_bytes, format="audio/mp3")
     
     # 音声ファイルのダウンロードリンク
-#    st.download_button(label="音声をダウンロード", data=audio_bytes, file_name="output.mp3", mime="audio/mp3")
-
-#    else:
-#        st.warning("エラーが起こりました。もう一度アクセスしてください")
-
+    st.download_button(label="音声をダウンロード", data=audio_bytes, file_name="preset_output.mp3", mime="audio/mp3")
 
 st.write('')
 st.write('')
-st.write('')
+#st.write('')
 
 
 st.markdown('##### 問１　以下の動画を視聴してから問いに答えなさい')
