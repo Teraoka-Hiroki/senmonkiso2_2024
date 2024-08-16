@@ -66,7 +66,7 @@ input_data = '　　本アプリは、2学期中間考査対策用です。\
 では、最後まで頑張って取り組んでください'
 st.write('はじめに')
 st.write('')
-st.write(input_data)
+#st.write(input_data)
 # テキスト入力
 text_input = st.text_area(input_data)
 
@@ -75,19 +75,20 @@ language = 'ja'
 
 # ボタンをクリックしたときの処理
 if st.button("音声で確認"):
-    if text_input:
-        tts = gTTS(text=text_input, lang=language)
-        tts.save("output.mp3")
-        
-        # 音声ファイルの再生
-        audio_file = open("output.mp3", "rb")
-        audio_bytes = audio_file.read()
-        st.audio(audio_bytes, format="audio/mp3")
-        
-        # 音声ファイルのダウンロードリンク
-        st.download_button(label="音声をダウンロード", data=audio_bytes, file_name="output.mp3", mime="audio/mp3")
-    else:
-        st.warning("エラーが起こりました。もう一度アクセスしてください")
+#    if text_input:
+    tts = gTTS(text=text_input, lang=language)
+    tts.save("output.mp3")
+    
+    # 音声ファイルの再生
+    audio_file = open("output.mp3", "rb")
+    audio_bytes = audio_file.read()
+    st.audio(audio_bytes, format="audio/mp3")
+    
+    # 音声ファイルのダウンロードリンク
+#    st.download_button(label="音声をダウンロード", data=audio_bytes, file_name="output.mp3", mime="audio/mp3")
+
+#    else:
+#        st.warning("エラーが起こりました。もう一度アクセスしてください")
 
 
 st.write('')
