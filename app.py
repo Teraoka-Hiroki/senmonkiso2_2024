@@ -55,7 +55,7 @@ st.title('専門基礎２学期パーフェクトアプリ 2024年版')
 st.write('')
 st.write('')
 
-preset_text = '　本アプリは、2学期中間考査対策用です。\
+input_data = '　本アプリは、2学期中間考査対策用です。\
 問１から問６までは、表計算アプリ、エクセルの問題です。\
 各問い、動画を視聴してから後の問題にトライしてください。\
 問７からは、ノギスの問題です。\
@@ -77,7 +77,7 @@ language = 'ja'
 # 再生ボタンをクリックしたときの処理
 if st.button("音声を再生"):
     # gTTSを使ってテキストを音声に変換
-    tts = gTTS(text=preset_text, lang='ja')
+    tts = gTTS(text=input_data, lang='ja')
     tts.save("preset_output.mp3")
     
     # 音声ファイルの再生
